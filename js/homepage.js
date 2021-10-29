@@ -25,6 +25,51 @@ $(document).ready(function() {
 		     noneN.style.display="block";	
 		} 
 	});
+
+	var animateB = document.getElementById("animateB");
+	var animateI = document.getElementById("animateI");
+	var animateU = document.getElementById("animateU");
+	var animateD = document.getElementById("animateD");
+
+	animateB.onmouseover = function() {
+	    if(animateB.classList!="angry-animate")
+	    {
+	        animateB.classList.add("angry-animate");
+			setTimeout(function() {
+				animateB.classList.remove("angry-animate");
+			}, 1000);		        
+	    }
+	};
+
+	animateI.onmouseover = function() {
+	    if(animateI.classList!="angry-animate")
+	    {
+	        animateI.classList.add("angry-animate");
+			setTimeout(function() {
+				animateI.classList.remove("angry-animate");
+			}, 1000);		        
+	    }
+	};
+
+	animateU.onmouseover = function() {
+	    if(animateU.classList!="angry-animate")
+	    {
+	        animateU.classList.add("angry-animate");
+			setTimeout(function() {
+				animateU.classList.remove("angry-animate");
+			}, 1000);		        
+	    }
+	};
+
+	animateD.onmouseover = function() {
+	    if(animateD.classList!="angry-animate")
+	    {
+	        animateD.classList.add("angry-animate");
+			setTimeout(function() {
+				animateD.classList.remove("angry-animate");
+			}, 1000);		        
+	    }
+	};
 });
 
 function reply_click(clicked_id, j, d)
