@@ -112,9 +112,9 @@ footer { background-color: #f1f1f1; padding: 10px; }
 		background-color: #EFD522; 
 	}
 
-#yaptigim-isler .row div { height: 300px; }
+#yaptigim-isler .row div { height: 300px; cursor: pointer;}
 #yaptigim-isler h1 { font-family: Indie Flower; font-size: 48px; }
-#yaptigim-isler h2 { font-family: Ubuntu; text-decoration: underline; }
+#yaptigim-isler h2 { font-family: Ubuntu; }
 #yaptigim-isler p {
 	text-align: justify;
 	padding: 10px;
@@ -123,6 +123,10 @@ footer { background-color: #f1f1f1; padding: 10px; }
 	font-family: Ubuntu;
 	font-size: 15px;	
 	border-radius: 5px;
+	-moz-box-shadow: 0 0 5px #000;
+	-webkit-box-shadow: 0 0 5px #000;
+	box-shadow: 0 0 5px #000;
+	background-color: #EFD522; 
 }
 
 p.comments { 
@@ -315,4 +319,31 @@ footer .row .col-25 ul span i {
 
 span.bosluk {
 	margin: 30px 0px;
+}
+
+.angry-animate:hover{
+	-webkit-animation:jump 1s ease 0s infinite normal;
+	-moz-animation:jump 1s ease 0s infinite normal;
+	-ms-animation:jump 1s ease 0s infinite normal;
+	animation:jump 1s ease 0s infinite normal;
+}
+
+@-webkit-keyframes jump{
+	0%{ -webkit-transform:translateY(0); transform:translateY(0); }
+	20%{ -webkit-transform:translateY(0); transform:translateY(0); }
+	40%{ -webkit-transform:translateY(-30px); transform:translateY(-30px); }
+	50%{ -webkit-transform:translateY(0); transform:translateY(0); }
+	60%{ -webkit-transform:translateY(-15px); transform:translateY(-15px); }
+	80%{ -webkit-transform:translateY(0); transform:translateY(0); }
+	100%{ -webkit-transform:translateY(0);transform:translateY(0); }
+}
+
+@keyframes jump{
+	0%{ transform:translateY(0); }
+	20%{ transform:translateY(0); }
+	40%{ transform:translateY(-30px); }
+	50%{ transform:translateY(0); }
+	60%{ transform:translateY(-15px); }
+	80%{ transform:translateY(0); }
+	100%{ transform:translateY(0); }
 }
