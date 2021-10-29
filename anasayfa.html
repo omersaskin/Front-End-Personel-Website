@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+	<head>
+		<title>Yazılım ve tasarım - Kişisel Web Sitesi - Ömer Şaşkın</title>
+		<meta name="description" content="Ömer Şaşkın kişisel web sitesi, web geliştirme uzmanı, yazılım ve teknoloji yazıları">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<link rel="canonical" href="https://www.coderomer.com"/>
+		<base href="https://coderomer.com/">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+		<script src="js/homepage.js"></script>
+	</head>
+	<body>
+		<nav class="topnav" id="topnavID">
+			<a href="#" class="animate linkBi active">Anasayfa</a>
+			<a href="#hakkimda" class="animate linkI">Hakkımda</a>
+			<a href="#yaptigim-isler" class="animate linkU">Yaptığım İşler</a>
+			<a href="#yorumlar" class="animate linkD">Yorumlar</a>
+			<a href="#iletisim" class="animate linkBe">İletişim</a>
+			<a href="javascript:void(0)" class="icon animate" onclick="responsiveMenu()"><i class="fa fa-bars" id="bar" aria-hidden="true"></i><i class="fas fa-times-circle" id="close"></i></a>
+		</nav>
+
+		<main>
+			<section id="hakkimda">
+				<div class="row">
+					<div class="col-50">
+						<img alt="hakkimda" src="img/163293313_137444794961595_4961125272421060112_n.jpg">
+					</div>
+					<div class="col-50">
+						<h1 class="animate">Hakkımda</h1>
+						<p class="animate">Kısaca hayatımdan bahsedecek olur isem, 1995 yılında İstanbul Bağcılar'da dünyaya geldim. İlk ve orta öğrenimimi burada tamamladım. Ardından Tekirdağ Namık Kemal Üniversitesi'nde Mekatronik ve sonra da Trakya Üniversitesi'nde Bilgisayar Programcılığı eğitimi aldım. Şuan da Anadolu Üniversitesi Yönetim Bilişim Sistemleri öğrencisi olarak öğrenim görmekteyim. Yazılımı seven biriyim ve yazılımı sadece bir meslek olarak değil gündelik hayatta karşılaştığımız problemleri daha kolay çözmeye yarayan araç olarak görmekteyim.</p>
+					</div>
+					<div class="col-50">
+						<img alt="hakkimda" src="img/163293313_137444794961595_4961125272421060112_n.jpg">
+					</div>
+				</div>
+			</section>
+			<section id="yaptigim-isler">
+				<h1>Yaptığım İşler</h1>
+				<div class="row">
+					<div class="col-50">
+						<h2>E-Ticaret Web Sitesi</h2>
+						<p>Laravel fremaworkü kullanarak tasarladığım projede anasayfa, ürün sayfası, ürün detay sayfası, kategori sayfası, sepet sayfası, kullanıcı kayıt sayfası ve kullanıcı giriş sayfası bulunmaktadır. Kullanıcılar kayıt yaptıklarında sepet sayfasına ulaşabilmek için aktivasyonlarını gerçekleştirmelidir. Sepet sayfasında ürün çıkarma, ekleme ve sepeti boşaltma özellikleri bulunmaktadır...</p>			
+					</div>
+					<div class="col-50">
+						<h2>Anket Web Sitesi</h2>
+						<p>Laravel freamworkü kullanarak tasarladığım projedir. Üye olarak veya üye olmadan anketlere katılım sağlanabilmektedir. Doldurulan anketler kapatılmaktadır. Kullanıcı panelinde yorum yapma, yorumların listelenmesi, günlük doldurulan anket sayısı grafiği, kullanıcı arama özellikleri bulunmaktadır. Yönetici panelinde ise anket oluşturma, düzenleme ve silme...</p>
+					</div>
+					<div class="col-50">
+						<h2>Mobil Oyun</h2>
+						<p>Apache Cordova ile tasarladığım android mobil oyundur. Oyunda zıplama, çarpma, hareket, ateş etme ve gizlenme özellikleri bulunmaktadır. Oyun arcade türünde olmakla birlikte senoryo ve sahne ile ilgi çekicidir. Kahraman zürafa düşmanları yok ederek ve engelleri aşarak kapıya 60 saniye içinde ulaşmalıdır. Geliştirmeler tamamlandıktan sonra oyun Play Store'da yayınlandı...</p>
+					</div>
+					<div class="col-50">
+						<h2>Puan Hesaplama Uygulaması</h2>
+						<p>JavaScript ile tasarladığım üniversiteye hazırlanan öğrencilerin puanlarını hesaplamada yardımcı olacak bir puan hesaplama uygulamasıdır. Katsayılar ve puanlama sistemi dikkate alınarak oluşturulmuştur. Etkileyici arayüzü ile kullanıcıların ilgisini çekebilecek şekildedir. Uygulama ile hem TYT hem de AYT puan hesaplaması yapılabilmektedir.</p>
+					</div>
+				</div>
+			</section>
+			<section id="yorumlar">
+				<h1>Yorumlar</h1>
+				<div class="row">
+					<div class="col-100 comments"></div>
+					<p id="uyariNone" style="font-size: 13px; font-family: Verdana; background-color: transparent; font-weight: bold;">Henüz yorum yapan olmadı!</p>
+				</div>
+			</section>
+			<section id="yorum-yap">
+				<h1>Düşüncelerini Paylaş</h1>
+				<div class="row">
+					<div class="col-100">
+						<textarea class="commentBox btn-outline btn-outline-default" placeholder="Yorum giriniz" type="textarea" required="" value=""></textarea>
+						<br><br><br>
+						<button id="btn1">Yorum Yap</button>
+						<p id="uyari" style="font-size: 13px; font-weight: bold; font-family: Verdana;"></p>							
+					</div>
+				</div>
+			</section>
+
+			<section id="iletisim">
+				<div class="row">
+					<div class="col-50">
+						<p><b>Adresim:</b> Örnek Mahallesi, Örnek Caddesi, 59000, Tekirdağ</p>
+						<p><b>E-Posta:</b> ornek@ornek.com</p>
+						<p><b>Telefon:</b> +90 XXX XXX XX XX</p>
+					</div>
+					<div class="col-50">
+						<h1>Bana Yazın</h1>
+						<form action="" method="">
+							<input class="btn-outline btn-outline-default" type="text" name="" placeholder="İsim giriniz" required="" value="">
+							<br><br><br>
+							<input class="btn-outline btn-outline-default" type="text" name="" placeholder="E-Posta giriniz" required="" value="">
+							<br><br><br>
+							<textarea class="btn-outline btn-outline-default" name="yorum" placeholder="Mesaj giriniz" required=""></textarea>
+							<br><br><br>
+							<input type="submit" name="">
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="row">
+				<div class="col-25">
+					<ul>
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+					</ul>
+				</div>
+				<div class="col-25">
+					<ul>
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+					</ul>
+				</div>
+				<div class="col-25">
+					<ul>
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+					</ul>
+				</div>
+				<div class="col-25">
+					<ul>  
+						<a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+						<a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+						<a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+						<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+					</ul>
+				</div>
+			</div>
+			<div class="row sub-information">
+				<div class="col-100">
+					<center><span>Tüm Hakları Saklıdır | Kişisel Web Sitesi © 2021</span></center>
+				</div>
+			</div>
+		</footer>
+		<a href="#"><div id="yukari"><i class="fas fa-arrow-up"></i></div></a>
+		<script src="js/script.js"></script>
+	</body>
+</html>

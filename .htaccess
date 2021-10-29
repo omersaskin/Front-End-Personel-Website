@@ -1,0 +1,25 @@
+# Yönlendirmeleri aktif eder
+RewriteEngine on
+
+# .html uzantıyı kaldırıyoruz
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L] 
+
+# Sayfaya yönlendirme yapıyoruz
+DirectoryIndex anasayfa.html
+
+# 404 yönlendirmesi yapıyoruz
+ErrorDocument 404 https://www.coderomer.com/404
+Options +FollowSymLinks
+
+# https yönlendirmesi yapıyoruz
+# RewriteCond %{HTTPS} !=on
+# RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/.+$
+# RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+# RewriteRule (.*) https://www.coderomer.com/$1 [R=301,L]
+
+# 301 yönlendirmesi yapıyoruz
+RewriteCond %{HTTP_HOST} ^coderomer.com [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.coderomer.com [NC]
+RewriteRule ^(.*)$ https://coderomer.com/ [L,R=301,NC]

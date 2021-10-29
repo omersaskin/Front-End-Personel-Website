@@ -1,0 +1,318 @@
+/* GENERAL CSS */
+* { outline-color: #000; text-align: center; font-family: Arial; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background-color: #f5f5f5; }
+
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #f3f3f3;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #000;    /* color of the scroll thumb */
+}
+
+.btn-outline { border: solid 5px #000; color: #000; padding: 14px 28px; font-size: 16px; border-radius: 5px; }
+.btn-outline-default {color: #000; }  /* Gray */
+
+/* Button animation tryout. */
+.animate {  animation: moveDown 0.8s ease-in-out 0.4s backwards; }
+
+@keyframes moveDown {
+    0% { 
+        transform: translateY(-70px); 
+        opacity: 0;
+    }
+    100% { 
+        transform: translateY(0px);  
+        opacity: 1;
+    }
+}
+
+/* NAV CSS */
+.topnav { position: sticky; top: 0; background-color: #000; overflow: hidden; }
+.topnav a { display: inline-block; color: #EFD522; font-family: Indie Flower; padding: 14px 18px; text-decoration: none; }
+.topnav a.current { background-color: #fff !important; }
+.topnav a:hover:not(.icon) { color: #fff !important; transition: color 0.4s; text-decoration: underline; text-decoration-thickness: 3px; }
+.topnav .icon { float: right; font-size: 24px; display: none; }
+
+@media screen and (max-width: 768px) {
+	.topnav { height: 120px; transition: height 0.7s; padding: 30px 0px 0px 0px !important; }
+	.topnav a:not(:first-child) { display: none; }
+	.topnav a.icon { display: block; position: absolute; right: 0; top: 0; }
+	.topnav .topnav.responsive .icon #bar { top: 0px; right: 0px; position: absolute; }
+	.topnav.responsive { position: relative; height: 350px; }
+	.topnav.responsive a { float: none; display: block;}
+	.topnav #close { display: none; }
+}
+
+#topnavID {
+	overflow: hidden;
+	font-size: 22px;
+	padding: 40px 10px; /* Large padding which will shrink on scroll (using JS) */
+	transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+	position: fixed; /* Sticky/fixed navbar */
+	width: 100%;
+	top: 0; /* At the top */
+	z-index: 99;
+}
+
+/* Style the logo */
+#topnavID #logo {
+	font-weight: bold;
+	transition: 0.4s;
+}
+
+#navbar #logo {
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+/* GRID CSS */
+main { width: 80%; margin: auto; margin-top: 240px;}
+.row { margin: 50px 0; }
+.row:after { content: ""; display: table; clear: both; }
+.row div { padding: 30px; height: 400px; float: left;}
+.col-100 { width: 100%; }
+.col-50 { width: 50%; }
+.col-33 { width: 33.33333%; }
+.col-25 { width: 25%; }
+footer { background-color: #f1f1f1; padding: 10px; }
+
+@media screen and (max-width: 768px) {
+	main { width: 100%; }
+	.row div { width: 100%; padding: 15px; }
+	#hakkimda .row .col-50:nth-child(1) { display: block !important; }
+	#hakkimda .row .col-50:nth-child(3) { display: none !important; }
+	#hakkimda .row div { height: auto !important; }
+	#iletisim .row div { height: auto !important; }
+	#iletisim .row .col-50:nth-child(1) { padding-top: 0px !important; }
+	h1 { margin: 0px; font-size: 36px !important; }
+	#yaptigim-isler .row div { height: auto !important; }
+	#yorum-yap .row div { height: auto !important; }
+}
+
+/* CONTENT */
+#hakkimda .row div { height: 500px; }
+#hakkimda h1 { font-family: Indie Flower; font-size: 48px; }
+#hakkimda p { font-family: Ubuntu; font-size: 15px; text-align: justify; }
+#hakkimda .row .col-50:nth-child(1) { display: none; }
+#hakkimda img { 
+		width: 100%; 
+		height: 100%; 
+		filter: grayscale(100%);	
+		padding: 5px;
+		-moz-box-shadow: 0 0 5px #000;
+		-webkit-box-shadow: 0 0 5px #000;
+		box-shadow: 0 0 5px #000;
+		background-color: #EFD522; 
+	}
+
+#yaptigim-isler .row div { height: 300px; }
+#yaptigim-isler h1 { font-family: Indie Flower; font-size: 48px; }
+#yaptigim-isler h2 { font-family: Ubuntu; text-decoration: underline; }
+#yaptigim-isler p {
+	text-align: justify;
+	padding: 10px;
+	background-color: #EFD522; 
+	color: #000;
+	font-family: Ubuntu;
+	font-size: 15px;	
+	border-radius: 5px;
+}
+
+p.comments { 
+	text-align: justify;
+	padding: 10px;
+	background-color: #EFD522; 
+	color: #000;
+	font-family: Ubuntu;
+	font-size: 15px;
+	border-radius: 20px; 
+}
+
+#none {
+	display: block;
+}
+
+#yorumlar .row div { height: auto; }
+#yorumlar h1 { font-family: Indie Flower; font-size: 48px; }
+#yorumlar h2 { font-family: Ubuntu; font-size: 24px; text-align: left; text-decoration: underline; }
+#yorumlar p { 
+	text-align: justify; 
+	font-family: Ubuntu;		
+	padding: 10px;
+	background-color: #EFD522; 
+	color: #000; 
+	font-size: 15px; 
+	border-radius: 20px;
+}
+
+#yorum-yap textarea { border-radius: 5px;	border: solid 1px #000; 	padding: 5px; width: 100%; height: 200px; padding-top: 30px; font-family: Ubuntu; font-size: 18px; color: #000; }
+
+
+#yorum-yap input[type="text"] { border-radius: 30px; width: 100%; height: 50px; font-family: Ubuntu; font-size: 18px; border: solid 0.6px #000; }
+#yorum-yap button {border-radius: 5px;	 border-style: none; font-family: Ubuntu; font-size: 15px; background-color: #000; color: #fff; padding: 10px; border-style: none; }
+#yorum-yap button:hover { color: #EFD522; transition: color 0.4s; cursor: pointer; }
+#yorum-yap h1 { font-family: Indie Flower; font-size: 48px; }
+
+#iletisim .row div { height: 650px; }
+#iletisim .row .col-50:nth-child(1) { padding-top: 25%; }
+#iletisim .row div p { text-align: left; font-family: Ubuntu; display: block; }
+#iletisim .row div p b {  font-family: Ubuntu; }
+#iletisim form textarea {border-radius: 5px;		width: 100%; height: 200px; padding-top: 30px; font-family: Ubuntu; font-size: 18px; border: solid 1px #000; }
+#iletisim form input[type="text"] {border-radius: 5px;		 width: 100%; height: 50px; font-family: Ubuntu; font-size: 18px; border: solid 1px #000; }
+#iletisim form input[type="submit"] {border-radius: 5px;	 border-style: none; font-family: Ubuntu; font-size: 15px; background-color: #000; color: #fff; padding: 10px; border-style: none; }
+#iletisim form input[type="submit"]:hover { color: #EFD522; transition: color 0.4s; cursor: pointer; }
+#iletisim h1 { font-family: Indie Flower; font-size: 48px; }
+
+#yukari {border-radius: 5px;	 position: fixed; padding: 15px; background-color: #000; color: #EFD522; right: 50px; bottom: 50px; cursor: pointer; }
+#yukari:hover { color: #fff; transition: 0.4s; }
+#yukari a { text-decoration: none }
+
+#btn_prev { background-color: #000; border-radius: 10px; margin: 0px 10px; color: #fff; padding: 10px; font-family: Ubuntu; text-decoration: none; }
+#btn_prev:hover { color: #EFD522; transition: color 0.4s; }
+#btn_next { background-color: #000; border-radius: 10px; color: #fff; padding: 10px; font-family: Ubuntu; text-decoration: none; }
+#btn_next:hover { color: #EFD522; transition: color 0.4s; }
+
+
+/* FOOTER */
+footer {
+	color: #000;
+	padding: 0px;
+}
+
+footer .row { 
+	background-color: #EFD522; 
+	height: auto !important; 
+	padding: 0px !important;
+	margin: 0px !important;
+}
+
+footer .row .col-25 { 
+	height: auto; 
+	padding: 0px !important;
+}
+
+footer .row .col-100 {
+	height: auto;
+	padding: 10px 0px;
+}
+
+footer .row .col-25 ul {
+	padding-left: 0px !important;
+}
+
+footer .row .col-25 ul li {
+	list-style: none;
+	margin: 10px 0px;
+	text-align:left;
+}
+
+footer .row .col-25 ul h2 {
+	font-family: Ubuntu;
+	font-size: 15px;
+	color: #fff;
+}
+
+footer .row .col-25 ul li a {
+	text-decoration: none;
+	color: #000 !important;
+	font-family: Ubuntu !important;
+	font-size: 13px;
+}
+
+footer .row .col-25 ul p {
+	text-decoration: none;
+	color: #fff;
+	font-family: Verdana !important;
+	font-size: 13px;
+}
+
+footer .row .col-25 ul li a:hover { 
+	text-decoration: underline; 
+	text-decoration-color: #000;
+	text-decoration-thickness: 3px;
+	color:#fff; 
+}
+
+footer ul a i { color: #000; }
+
+.sub-information { 
+	padding: 5px 0px; 
+	background-color: #fff !important; 
+	text-align: center !important; 
+	color: #000; 
+	font-size: 13px; 
+	font-weight: bold;
+}
+
+.col-25 { 
+	display: flex; 
+	align-items: center; 
+	justify-content: center; 
+}
+
+.col-25 a i { 
+	font-size:24px;
+	margin: 0px 15px; 
+}
+
+.col-25 a i:hover { 
+	transform: rotate(360deg); 
+	transition: all 1.2s;
+}
+
+@keyframes opacty {
+    0% { 
+        opacity: 0.5;
+    }
+    100% { 
+        opacity: 1;
+    }
+}
+
+footer .row .col-25 a {
+	color: #fff !important;
+}
+
+footer .row .col-25 a:hover {
+	color: #000 !important;
+}
+
+footer .row .col-25 ul p {
+	color: #fff;
+}
+
+footer .row .col-25 ul span i {
+	color: #000;
+}
+
+.scrollable-element {
+  scrollbar-color: dark !important;
+}
+
+.buttonStil {
+	text-align: justify;
+	padding: 10px;
+	cursor: pointer;
+	background-color: #000; 
+	color: #fff;
+	font-family: Ubuntu;
+	font-size: 15px;
+	border-radius: 5px; 
+	border-style: none;	
+}
+
+.buttonStil:hover {
+	color: #EFD522;
+	transition: color 0.7s;
+}
+
+span.bosluk {
+	margin: 30px 0px;
+}
